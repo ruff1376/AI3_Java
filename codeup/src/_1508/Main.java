@@ -6,8 +6,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt(), arr[][] = new int[n][n], size[] = new int[4];
+		int n = sc.nextInt(), arr[][] = new int[n][];
 		for (int i = 0; i < n; i++) {
+			arr[i] = new int[i + 1];
 			arr[i][0] = sc.nextInt();
 		}
 		for (int j = 0; j < n - 1; j++) {
