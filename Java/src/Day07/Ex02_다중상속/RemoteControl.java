@@ -21,6 +21,7 @@ public interface RemoteControl {
 		}
 		
 	}
+	
 	static void changeBattery() {
 		System.out.println("배터리 교체");
 	}
