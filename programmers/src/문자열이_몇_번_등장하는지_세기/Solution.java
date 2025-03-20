@@ -6,7 +6,7 @@ public class Solution {
 		String myString = "banana";
 		String pat = "ana";
 		int answer = 0;
-		for (int i = 0; i < myString.length(); i++) {
+		for (int i = 0; i < myString.length() - pat.length() + 1; i++) {
 			int i2 = i, cnt = 0;
 			for (int j = 0; j < pat.length(); j++) {
 				if (myString.charAt(i2) == pat.charAt(j)) {
