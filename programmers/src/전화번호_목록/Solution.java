@@ -6,6 +6,7 @@ import java.util.Set;
 public class Solution {
     public static void main(String[] args) {
     	String[] phone_book = {"12","123","1235","567","88"};
+//    	// HashMap 활용
 //        HashMap<String, Boolean> map = new HashMap<>();
 //
 //        // 모든 전화번호를 HashMap에 저장
@@ -23,6 +24,8 @@ public class Solution {
 //            }
 //        }
 //        System.out.println(true);
+    	
+    	// Set 활용
     	Set<String> set = new HashSet<>();
     	for (String number : phone_book) {
     		set.add(number);
