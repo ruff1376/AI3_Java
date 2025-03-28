@@ -1,4 +1,4 @@
-package Ex01;
+package Chapter3;
 
 public class homework_java_한지용_연습문제_3 {
 
