@@ -19,6 +19,7 @@ package 단축키;
 // 뒤로 가기		: ctrl + Z
 // 앞으로 가기		: ctrl + Y
 // 전체 화면		: ctrl + M
+// 자동 들여쓰기	: ctrl + shift + F
 
 public class Key {
 	
