@@ -183,7 +183,7 @@ public class BoardDAO extends JDBConnection {
 			// * executeUpdate() 
 			// SQL(INSERT, UPDATE, DELETE) 실행 시 적용된 데이터 개수를 int 타입으로 받아온다.
 			// ex) 게시글 1개 적용 성공 시, result : 1 
-			//				    실패 시, result : 0
+			//				   실패 시, result : 0
 		} catch (SQLException e) {
 			System.err.println("게시글 삭제 시, 예외 발생");
 			e.printStackTrace();
