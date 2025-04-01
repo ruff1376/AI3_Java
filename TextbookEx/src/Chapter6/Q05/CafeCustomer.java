@@ -32,6 +32,7 @@ public class CafeCustomer {
 		if (beverage == null) beverage = cafe.getBeverage();
 		else beverage += ", " + cafe.getBeverage();
 		money -= cafe.getPrice();
+		cafe.setSales(cafe.getSales() + cafe.getPrice());
 	}
 	
 	@Override
