@@ -35,7 +35,7 @@ public class BoardServiceImpl implements BoardService {
 		// 적용된 데이터 개수를 반환
 		// - result(결과)	: 0 --> 데이터 등록 실패
 		//				  1 --> 데이터 등록 성공
-		if( result > 0 ) System.out.println("데이터 등록 성공!");
+		if (result > 0) System.out.println("데이터 등록 성공!");
 		else System.err.println("데이터 등록 실패!");
 		return result;
 	}
@@ -45,8 +45,8 @@ public class BoardServiceImpl implements BoardService {
 		int result = boardDAO.update(board);
 		// 적용된 데이터 개수를 반환
 		// - result(결과)	: 0 --> 데이터 수정 실패
-		//				      1 --> 데이터 수정 성공
-		if( result > 0 ) System.out.println("데이터 수정 성공!");
+		//				  1 --> 데이터 수정 성공
+		if (result > 0) System.out.println("데이터 수정 성공!");
 		else System.err.println("데이터 수정 실패!");
 		return result;
 	}
@@ -57,7 +57,7 @@ public class BoardServiceImpl implements BoardService {
 		// 적용된 데이터 개수를 반환
 		// - result(결과)	: 0 --> 데이터 삭제 실패
 		//				  1 --> 삭제 수정 성공
-		if( result > 0 ) System.out.println("데이터 삭제 성공!");
+		if (result > 0) System.out.println("데이터 삭제 성공!");
 		else System.err.println("데이터 삭제 실패!");
 		return result;
 	}

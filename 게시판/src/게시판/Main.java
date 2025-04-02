@@ -45,7 +45,7 @@ public class Main {
 	 */
 	private static void printAll(List<Board> list) {
 		// 글 목록이 존재하는지 확인
-		if( list == null || list.isEmpty() ) {
+		if (list == null || list.isEmpty()) {
 			System.err.println("조회된 글이 없습니다.");
 			return;
 		}
@@ -60,7 +60,7 @@ public class Main {
 	 * @param board
 	 */
 	private static void print(Board board) {
-		if( board == null ) {
+		if (board == null) {
 			System.err.println("조회할 수 없는 게시글입니다.");
 			return;
 		}
@@ -69,12 +69,12 @@ public class Main {
 		String title = board.getTitle();
 		String writer = board.getWriter();
 		String content = board.getContent();
-		Date regDate = board.getRegDate();
-		Date updDate = board.getUpdDate();
+		Date createdAt = board.getCreatedAt();
+		Date updatedAt = board.getUpdatedAt();
 		// 날짜 포맷
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		String reg = sdf.format(regDate);
-		String upd = sdf.format(updDate);
+		String reg = sdf.format(createdAt);
+		String upd = sdf.format(updatedAt);
 		
 		System.out.println("::::::::::::::::::::::::::::::::::::::::");
 		System.out.println("★ 글번호 : " + no);
@@ -111,7 +111,7 @@ public class Main {
 		Board board = input();
 		// 게시글 등록 요청
 		int result = boardService.insert(board);
-		if( result > 0 ) {
+		if (result > 0) {
 			System.out.println("★ 게시글이 등록되었습니다.");
 		} else {
 			System.err.println("★ 게시글 등록에 실패하였습니다.");
@@ -149,7 +149,7 @@ public class Main {
 		
 		// 게시글 수정 요청
 		int result = boardService.update(board);
-		if( result > 0 ) {
+		if (result > 0) {
 			System.out.println("★ 게시글이 수정되었습니다.");
 		} else {
 			System.err.println("★ 게시글 수정에 실패하였습니다.");
@@ -168,7 +168,7 @@ public class Main {
 		
 		// 게시글 삭제 요청
 		int result = boardService.delete(no);
-		if( result > 0 ) {
+		if (result > 0) {
 			System.out.println("★ 게시글을 삭제하였습니다.");
 		} else {
 			System.err.println("★ 게시글 삭제에 실패하였습니다.");
@@ -185,19 +185,19 @@ public class Main {
 			menuNo = sc.nextInt();
 			sc.nextLine();
 			// 0 -> 프로그램 종료
-			if( menuNo == 0 ) break;
+			if (menuNo == 0) break;
 			// 메뉴 선택
 			switch (menuNo) {
 				case 1:	list();			// 게시글 목록
-						break;
+					break;
 				case 2:	select();		// 게시글 조회
-						break;
+					break;
 				case 3:	insert();		// 게시글 등록
-						break;
+					break;
 				case 4:	update();		// 게시글 수정
-						break;
+					break;
 				case 5:	delete();		// 게시글 삭제
-						break;
+					break;
 			}
 		} while (menuNo != 0);
 		
