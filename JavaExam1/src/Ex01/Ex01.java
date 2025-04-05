@@ -6,18 +6,21 @@ public class Ex01 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int[] scoreArr = new int[5];
-		for (int i = 0; i < scoreArr.length; i++) {
-			scoreArr[i] = sc.nextInt();
+		int[] scoreArrAsc = new int[5];
+		int[] scoreArrDesc = new int[5];
+		for (int i = 0; i < scoreArrAsc.length; i++) {
+			int score = sc.nextInt();
+			scoreArrAsc[i] = score;
+			scoreArrDesc[i] = score;
 		}
 		
 		// 삽입 오름차순 정렬
-		for (int i = 1; i < scoreArr.length; i++) {
+		for (int i = 1; i < scoreArrAsc.length; i++) {
 			for (int j = i; j > 0; j--) {
-				if (scoreArr[j] < scoreArr[j - 1]) {
-					int temp = scoreArr[j - 1];
-					scoreArr[j - 1] = scoreArr[j];
-					scoreArr[j] = temp;
+				if (scoreArrAsc[j] < scoreArrAsc[j - 1]) {
+					int temp = scoreArrAsc[j - 1];
+					scoreArrAsc[j - 1] = scoreArrAsc[j];
+					scoreArrAsc[j] = temp;
 				}
 				else {
 					break;
@@ -26,18 +29,18 @@ public class Ex01 {
 		}
 		
 		// 오름차순 정렬 결과물 출력
-		for (int score : scoreArr) {
+		for (int score : scoreArrAsc) {
 			System.out.print(score + " ");
 		}
 		System.out.println();
 		
 		// 삽입 내림차순 정렬
-		for (int i = 1; i < scoreArr.length; i++) {
+		for (int i = 1; i < scoreArrDesc.length; i++) {
 			for (int j = i; j > 0; j--) {
-				if (scoreArr[j] > scoreArr[j - 1]) {
-					int temp = scoreArr[j - 1];
-					scoreArr[j - 1] = scoreArr[j];
-					scoreArr[j] = temp;
+				if (scoreArrDesc[j] > scoreArrDesc[j - 1]) {
+					int temp = scoreArrDesc[j - 1];
+					scoreArrDesc[j - 1] = scoreArrDesc[j];
+					scoreArrDesc[j] = temp;
 				}
 				else {
 					break;
@@ -46,7 +49,7 @@ public class Ex01 {
 		}
 		
 		// 내림차순 정렬 결과물 출력
-		for (int score : scoreArr) {
+		for (int score : scoreArrDesc) {
 			System.out.print(score + " ");
 		}
 		System.out.println();
