@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="372.0" layoutY="28.0" text="게시판">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <TableView layoutX="30.0" layoutY="100.0" prefHeight="400.0" prefWidth="820.0">
+        <columns>
+          <TableColumn text="글 번호" />
+          <TableColumn prefWidth="300.0" text="제목" />
+            <TableColumn prefWidth="120.0" text="작성자" />
+            <TableColumn prefWidth="160.0" text="등록일자" />
+            <TableColumn prefWidth="160.0" text="수정일자" />
+        </columns>
+      </TableView>
+      <Button layoutX="30.0" layoutY="528.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="종료하기">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="145.0" layoutY="528.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="선택삭제">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="750.0" layoutY="528.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="글쓰기">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
