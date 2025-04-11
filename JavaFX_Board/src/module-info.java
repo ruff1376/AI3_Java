@@ -6,6 +6,6 @@ module JavaFX_Board {
 	requires lombok;
 	
 	opens application to javafx.base, javafx.graphics, javafx.fxml;
-	opens application.Controller to javafx.base;
+	opens application.Controller to javafx.base, javafx.fxml;
 	opens application.DTO to javafx.base;
 }
