@@ -6,8 +6,8 @@ public class Ex01 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int[] scoreArrAsc = new int[5];
-		int[] scoreArrDesc = new int[5];
+		int[] scoreArrAsc = new int[5];			// 오름차순 정렬 배열
+		int[] scoreArrDesc = new int[5];		// 내림차순 정렬 배열
 		for (int i = 0; i < scoreArrAsc.length; i++) {
 			int score = sc.nextInt();
 			scoreArrAsc[i] = score;

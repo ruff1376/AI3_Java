@@ -10,6 +10,8 @@ public class Book {
 	private String content;
 	private int price;
 	
+	DecimalFormat df = new DecimalFormat("000000");
+	
 	public Book() {
 		this(0, "제목 없음", "저자 없음", "컨텐츠 없음", 0);
 	}
@@ -64,9 +66,7 @@ public class Book {
 	
 	@Override
 	public String toString() {
-		DecimalFormat df = new DecimalFormat("000000");
-		if (title.length() > 5) return df.format(isbn) + " | " + title + "\t| " + writer + " | " + content + "\t| " + price;
-		else return df.format(isbn) + " | " + title + "\t\t| " + writer + " | " + content + "\t\t| " + price;
+		return df.format(isbn) + " | " + title + " | " + writer + " | " + content + " | " + price;
 	}
 	
 }

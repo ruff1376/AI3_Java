@@ -11,7 +11,7 @@ public class Library {
 									 new Book(112112, "정보처리기사", "김휴먼", "국가기술자격", 45000),
 									 new Book(1001, "실무 DB", "박디비", "디비디비딥", 60000));
 		
-		System.out.println("########## 휴먼 스터디 도서관 ##########");
+		System.out.println("########## 조은 스터디 도서관 ##########");
 		for (Book book : bookList)
 			System.out.println(book);
 	}

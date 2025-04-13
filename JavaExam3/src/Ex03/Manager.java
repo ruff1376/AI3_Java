@@ -15,6 +15,7 @@ public class Manager {
 		printList(sll);
 	}
 
+	// 텍스트 파일 입력
 	public static LinkedList<Student> getTxtToList(LinkedList<Student> list) {
 		try {
 			File file = new File("./src/Ex03/student.txt");
@@ -37,11 +38,12 @@ public class Manager {
 		return list;
 	}
 	
+	// 성적 내림차순 정렬 후 번호 오름차순 정렬
 	public static LinkedList<Student> sortScoreAndNo(LinkedList<Student> list) {
 		LinkedList<Student> newList = new LinkedList<>(list);
 		newList.sort(
-			Comparator.comparingInt(Student::getScore).reversed()
-				   	  .thenComparingInt(Student::getNo)
+			Comparator.comparingInt(Student::getScore).reversed()		// 성적 내림차순 정렬
+				   	  .thenComparingInt(Student::getNo)					// 이후 번호 오름차순 정렬
 	    );
 		return newList;
 	}
