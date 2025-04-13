@@ -1,6 +1,7 @@
 package application.DAO;
 
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +13,11 @@ import application.DTO.Board;
  */
 public class BoardDAO extends JDBConnection {
 	
+	// 날짜 형식
+	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	
 	/**
-	 * 데이터 목록
+	 * 데이터 목록 조회
 	 * @return List<Board> 게시글 목록
 	 */
 	public List<Board> list() {
@@ -42,8 +46,8 @@ public class BoardDAO extends JDBConnection {
 				board.setTitle(rs.getString("title"));
 				board.setWriter(rs.getString("writer"));
 				board.setContent(rs.getString("content"));
-				board.setCreatedAt(rs.getTimestamp("created_at"));
-				board.setUpdatedAt(rs.getTimestamp("updated_at"));
+				board.setCreatedAt(dateFormat.format(rs.getTimestamp("created_at")));
+				board.setUpdatedAt(dateFormat.format(rs.getTimestamp("updated_at")));
 				
 				// 게시글 목록 추가
 				boardList.add(board);
@@ -92,8 +96,8 @@ public class BoardDAO extends JDBConnection {
 				board.setTitle(rs.getString("title"));
 				board.setWriter(rs.getString("writer"));
 				board.setContent(rs.getString("content"));
-				board.setCreatedAt(rs.getTimestamp("created_at"));
-				board.setUpdatedAt(rs.getTimestamp("updated_at"));
+				board.setCreatedAt(dateFormat.format(rs.getTimestamp("created_at")));
+				board.setUpdatedAt(dateFormat.format(rs.getTimestamp("updated_at")));
 			}
 			
 		} catch (SQLException e) {

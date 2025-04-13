@@ -33,17 +33,11 @@ public class JDBConnection {
 			// 자바 프로그램에서 JDBC 드라이버를 연결시켜주는 클래스
 			// getConnection() 메소드로 DB에 연결 요청하고 생성된 Connection 객체를 반환받는다.
 			con = DriverManager.getConnection(url, id, pw);
-			
-			System.out.println("DB 연결 성공");
 		} catch (Exception e) {
 			System.err.println("DB 연결 실패");
 			e.printStackTrace();
 		}
 		
-	}
-	
-	public static void main(String[] args) {
-		JDBConnection jdbc = new JDBConnection();
 	}
 
 }

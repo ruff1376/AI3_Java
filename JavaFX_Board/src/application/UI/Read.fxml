@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.ReadController">
    <children>
-      <Label alignment="CENTER" layoutX="372.0" layoutY="40.0" text="글읽기">
+      <Label alignment="CENTER" layoutX="372.0" layoutY="28.0" text="글읽기">
          <font>
             <Font size="45.0" />
          </font>
@@ -29,27 +29,27 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField editable="false" layoutX="252.0" layoutY="119.0" prefHeight="38.0" prefWidth="507.0" promptText="제목을 입력하세요">
+      <TextField fx:id="tfTitle" editable="false" layoutX="252.0" layoutY="119.0" prefHeight="38.0" prefWidth="507.0" promptText="제목을 입력하세요">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField editable="false" layoutX="252.0" layoutY="170.0" prefHeight="38.0" prefWidth="507.0" promptText="작성자를 입력하세요">
+      <TextField fx:id="tfWriter" editable="false" layoutX="252.0" layoutY="170.0" prefHeight="38.0" prefWidth="507.0" promptText="작성자를 입력하세요">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextArea editable="false" layoutX="117.0" layoutY="267.0" prefHeight="242.0" prefWidth="645.0" promptText="내용을 작성하세요">
+      <TextArea fx:id="taContent" editable="false" layoutX="117.0" layoutY="267.0" prefHeight="242.0" prefWidth="645.0" promptText="내용을 작성하세요">
          <font>
             <Font size="18.0" />
          </font>
       </TextArea>
-      <Button layoutX="116.0" layoutY="528.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="목록">
+      <Button layoutX="116.0" layoutY="528.0" mnemonicParsing="false" onAction="#moveToList" prefHeight="40.0" prefWidth="100.0" text="목록">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="662.0" layoutY="528.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="수정">
+      <Button layoutX="662.0" layoutY="528.0" mnemonicParsing="false" onAction="#moveToUpdate" prefHeight="40.0" prefWidth="100.0" text="수정">
          <font>
             <Font size="16.0" />
          </font>
