@@ -66,7 +66,8 @@ public class Book {
 	
 	@Override
 	public String toString() {
-		return df.format(isbn) + " | " + title + " | " + writer + " | " + content + " | " + price;
+		return String.format("%6s | %-10s | %-6s | %-12s | %6d",
+	            df.format(isbn), title, writer, content, price);
 	}
 	
 }
