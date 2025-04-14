@@ -133,7 +133,7 @@ public class MainController implements Initializable {
 	
 	/**
 	 * 선택 삭제
-	 * : 체크박스에 삭제할 글들을 선택하고 선택삭제 버튼 클릭 시 해당 글들을 일괄 삭제
+	 * : 체크박스에 삭제할 글들을 선택하고 선택삭제 버튼 클릭->확인 시 해당 글들을 일괄 삭제
 	 * @param event
 	 */
 	public void deleteSelected(ActionEvent event) {
